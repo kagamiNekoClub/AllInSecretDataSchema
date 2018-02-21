@@ -1,0 +1,71 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "ActorData Of All In Secret ",
+	"description": "秘语探寻角色信息文档",
+	"type": "object",
+	"properties": {
+		"name": {
+			"$id": "/properties/name",
+			"description": "角色姓名",
+            "type": "string",
+            "default":""
+		},
+		"description": {
+			"$id": "/properties/description",
+			"description": "角色描述",
+			"type": "string",
+            "default":""
+		},
+		"level": {
+			"$id": "/properties/level",
+			"description": "角色等级",
+			"type": "integer",
+			"minimum": 1,
+			"maximum": 100,
+			"default": 1
+		},
+		"attributes": {
+			"$id": "/properties/attributes",
+			"description": "角色属性",
+			"type": "object",
+			"properties": {
+				"base": {
+					"$id": "/properties/attributes",
+					"description": "基础属性",
+					"type": "object",
+					"properties": {
+						"power":{
+
+						}
+					}
+				}
+			}
+		},
+		"templates": {
+            "$id": "/properties/templates",
+            "description": "角色模板",
+			"type": "array",
+			"items": {
+                "type":"object",
+                "$ref": "./templateDataSchema.json"
+            }
+		},
+		"vaillants": {
+			"$id": "/properties/templates",
+			"description": "角色威能",
+            "type": "array",
+            "items": {
+                "type":"object",
+                "$ref": "./vaillantDataSchema.json"
+            }
+		}
+	},
+	"required": [
+		"name",
+		"description",
+		"level",
+		"attributes",
+		"templates",
+		"vaillants"
+	]
+}

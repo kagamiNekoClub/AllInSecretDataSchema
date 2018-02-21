@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "ActorData Of All In Secret ",
+	"description": "A Data from All In Secret Actor Info.",
+    "type": "object",
+    "properties": {
+		"name": {
+			"$id": "/properties/name",
+			"description": "The name of actor",
+			"type": "string"
+		},
+		"description": {
+			"$id": "/properties/description",
+			"description": "The description of actor",
+			"type": "string"
+        },
+        "type":{
+            "$id": "/properties/type",
+			"description": "The type of actor",
+            "type": "string",
+            "enum":["法术类威能~纯粹法术/塑能", "法术类威能~纯粹法术/咒法", "法术类威能~纯粹法术/变化"]
+        }
+    }
+}
